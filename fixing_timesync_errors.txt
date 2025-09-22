@@ -1,0 +1,13 @@
+// it synchronzies machine timing with taregt server 
+
+
+$ sudo timedatectl set-ntp 0                                                                                                                     
+┌──(root㉿kali)-[~]
+└─$ sudo /etc/init.d/virtualbox-guest-utils stop
+Stopping virtualbox-guest-utils (via systemctl): virtualbox-guest-utils.service.
+                                                                                                                                
+┌──(root㉿kali)-[~]
+└─$ sudo systemctl stop systemd-timesyncd
+                                                                                                                                
+┌──(root㉿kali)-[~]
+└─$ sudo ntpdate -s xx.xx.xx.xx
